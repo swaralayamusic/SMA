@@ -12,6 +12,7 @@ function App() {
       <Header/>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/SMA" element={<Home/>}/>
         <Route path="/achievements" element={<Achievements />} />
       </Routes>
       <Footer/>
