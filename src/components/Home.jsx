@@ -5,7 +5,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp'; // Import WhatsApp icon
 
 const Home = () => {
 
-    const whatsappNumber = '00919940675703'; // Replace 'whatsapp_number_here' with your actual WhatsApp number
+    const whatsappNumber = '96893277381'; // Replace 'whatsapp_number_here' with your actual WhatsApp number
 
     const handleContactClick = () => {
         window.open(`https://wa.me/${whatsappNumber}`, '_blank');

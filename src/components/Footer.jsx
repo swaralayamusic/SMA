@@ -1,19 +1,21 @@
 import React from 'react';
-import { Container, Grid, Typography, Link, IconButton } from '@mui/material';
+import { Container, Grid, Typography, Link, IconButton, useMediaQuery } from '@mui/material';
 import { Facebook, Twitter, Instagram, WhatsApp } from '@mui/icons-material';
 
 const Footer = () => {
+  const isMdScreen = useMediaQuery('(max-width:960px)');
+
   return (
     <footer style={{ backgroundColor: '#f5f5f5', padding: '20px', marginTop: '20px' }}>
       <Container>
-        <Grid container spacing={2} justifyContent="space-between" alignItems="center">
+        <Grid container spacing={2} justifyContent="space-between" alignItems={isMdScreen ? 'center' : 'flex-start'}>
           <Grid item xs={12} md={6}>
-            <Typography variant="h6" component="div">
+            <Typography variant="h6" component="div" align={isMdScreen ? 'center' : 'inherit'}>
               Swaralaya Music Academy
             </Typography>
           </Grid>
           <Grid item xs={12} md={6}>
-            <Grid container spacing={2} justifyContent="flex-end">
+            <Grid container spacing={2} justifyContent={isMdScreen ? 'center' : 'flex-end'} alignItems="center">
               <Grid item>
                 <Link href="https://www.facebook.com/Swaralaya-Music-Academy" target="_blank" rel="noopener noreferrer">
                   <IconButton color="primary" aria-label="Facebook">
@@ -36,7 +38,7 @@ const Footer = () => {
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="https://wa.me/whatsappphonenumber" target="_blank" rel="noopener noreferrer">
+                <Link href="https://wa.me/96893277381" target="_blank" rel="noopener noreferrer">
                   <IconButton color="primary" aria-label="WhatsApp">
                     <WhatsApp />
                   </IconButton>
